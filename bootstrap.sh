@@ -14,20 +14,15 @@ mkdir -p "${HOME}/Sources"
 echo "installing homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-BREW_PREFIX=$(brew --prefix)
-
 echo "brew installing stuff"
 brew install git
 brew install bash
 brew install bash-completion2
 brew install watchman
 brew install node
+brew install mc
 
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/bash";
-fi;
+chsh -s "$(brew --prefix)/bin/bash";
 
 echo "installing a few global npm packages"
 npm install --global parcel-bundler fkill-cli
@@ -44,6 +39,7 @@ brew cask install telegram
 brew cleanup
 
 echo "cloning dotfiles"
+rm -rf "${HOME}/Sources/dotfiles"
 git clone https://github.com/FokinAleksandr/dotfiles.git "${HOME}/Sources/dotfiles"
 
 rsync --exclude ".git/" \
