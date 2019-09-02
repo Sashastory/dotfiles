@@ -22,7 +22,10 @@ brew install watchman
 brew install node
 brew install mc
 
-chsh -s "$(brew --prefix)/bin/bash";
+if ! fgrep -q "$(brew --prefix)/bin/bash" /etc/shells; then
+  echo "$(brew --prefix)/bin/bash" | sudo tee -a /etc/shells;
+fi;
+chsh -s "$(brew --prefix)/bin/bash"
 
 echo "installing a few global npm packages"
 npm install --global parcel-bundler fkill-cli
