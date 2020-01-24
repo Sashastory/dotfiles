@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Ask for the administrator password upfront
 sudo -v
 
@@ -10,25 +9,17 @@ echo "Hello $(whoami)! Let's get you set up."
 
 echo "mkdir -p ${HOME}/Sources"
 mkdir -p "${HOME}/Sources"
-mkdir -p "${HOME}/.nvm"
 
 echo "installing homebrew"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 echo "brew installing stuff"
 brew install git
-brew install bash
-brew install bash-completion2
 brew install watchman
 brew install node
 brew install mc
-brew install git-lfs
-brew install nvm
 
-if ! fgrep -q "$(brew --prefix)/bin/bash" /etc/shells; then
-  echo "$(brew --prefix)/bin/bash" | sudo tee -a /etc/shells;
-fi;
-chsh -s "$(brew --prefix)/bin/bash"
+chsh -s "/bin/zsh"
 
 echo "installing a few global npm packages"
 npm install --global parcel-bundler fkill-cli
@@ -37,12 +28,10 @@ echo "installing apps with brew cask"
 brew cask install discord
 brew cask install google-chrome
 brew cask install firefox
-brew cask install itsycal
 brew cask install visual-studio-code
 brew cask install vlc
 brew cask install webstorm
 brew cask install telegram
-brew cask install slack
 brew cask install yandex-disk
 brew cleanup
 
@@ -58,4 +47,4 @@ rsync --exclude ".git/" \
   -avh --no-perms "${HOME}/Sources/dotfiles/" ~;
 
 source "${HOME}/Sources/dotfiles/.macos"
-source ~/.bash_profile
+source ~/.zshrc
