@@ -1,6 +1,6 @@
 [user]
-	name = yetto
-	email = shwayze@yandex.ru
+	name = Александр Фокин
+	email = a.fokin@superjob.ru
 
 [alias]
 
@@ -94,10 +94,13 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
+[lfs]
+    contenttype = false
+
 [push]
 
 	# https://git-scm.com/docs/git-config#git-config-pushdefault
-	default = simple
+	default = current
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 

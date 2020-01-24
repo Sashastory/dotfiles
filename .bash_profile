@@ -28,6 +28,7 @@ export MANPAGER='less -X';
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
+export NVM_DIR="$HOME/.nvm"
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
@@ -72,3 +73,5 @@ if which brew &> /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completi
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
+
+source $(brew --prefix nvm)/nvm.sh

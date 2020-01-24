@@ -10,6 +10,7 @@ echo "Hello $(whoami)! Let's get you set up."
 
 echo "mkdir -p ${HOME}/Sources"
 mkdir -p "${HOME}/Sources"
+mkdir -p "${HOME}/.nvm"
 
 echo "installing homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -21,6 +22,8 @@ brew install bash-completion2
 brew install watchman
 brew install node
 brew install mc
+brew install git-lfs
+brew install nvm
 
 if ! fgrep -q "$(brew --prefix)/bin/bash" /etc/shells; then
   echo "$(brew --prefix)/bin/bash" | sudo tee -a /etc/shells;
@@ -38,7 +41,8 @@ brew cask install itsycal
 brew cask install visual-studio-code
 brew cask install vlc
 brew cask install webstorm
-#brew cask install telegram
+brew cask install telegram
+brew cask install slack
 brew cask install yandex-disk
 brew cleanup
 
