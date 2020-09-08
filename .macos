@@ -15,9 +15,9 @@ osascript -e 'tell application "System Preferences" to quit'
 defaults write -g com.apple.keyboard.fnState -bool true
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "yetto"
-sudo scutil --set HostName "yetto"
-sudo scutil --set LocalHostName "yetto"
+#sudo scutil --set ComputerName "yetto"
+#sudo scutil --set HostName "yetto"
+#sudo scutil --set LocalHostName "yetto"
 #sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "0x6D746873"
 
 # Disable the sound effects on boot
