@@ -30,6 +30,7 @@ brew cask install google-chrome
 brew cask install firefox
 brew cask install visual-studio-code
 brew cask install vlc
+brew cask install spotify
 brew cask install webstorm
 brew cask install telegram
 brew cask install yandex-disk
