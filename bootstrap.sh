@@ -18,6 +18,7 @@ brew install git
 brew install watchman
 brew install node
 brew install mc
+brew install git-quick-stats
 
 chsh -s "/bin/zsh"
 
