@@ -18,7 +18,6 @@ brew install git
 brew install watchman
 brew install node
 brew install mc
-brew install git-quick-stats
 
 chsh -s "/bin/zsh"
 
@@ -35,6 +34,8 @@ brew cask install spotify
 brew cask install webstorm
 brew cask install telegram
 brew cask install yandex-disk
+brew cask install slack
+brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 brew cleanup
 
 echo "cloning dotfiles"
