@@ -35,6 +35,7 @@ brew cask install webstorm
 brew cask install telegram
 brew cask install yandex-disk
 brew cask install slack
+brew cask install tandem
 brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 brew cleanup
 
