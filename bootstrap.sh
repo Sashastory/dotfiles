@@ -39,6 +39,8 @@ brew cask install tandem
 brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 brew cleanup
 
+gem install cocoapods --user-install
+
 echo "cloning dotfiles"
 rm -rf "${HOME}/Sources/dotfiles"
 git clone https://github.com/FokinAleksandr/dotfiles.git "${HOME}/Sources/dotfiles"
