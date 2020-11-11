@@ -40,7 +40,7 @@ brew cask install zoom
 brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 brew cleanup
 
-gem install cocoapods --user-install
+gem install cocoapods
 
 echo "cloning dotfiles"
 rm -rf "${HOME}/Sources/dotfiles"
