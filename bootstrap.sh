@@ -44,6 +44,9 @@ brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 brew cleanup
 
 gem install cocoapods
+brew tap facebook/fb
+brew install idb-companion
+sudo -H python3 -m pip install fb-idb -v
 
 echo "cloning dotfiles"
 rm -rf "${HOME}/Sources/dotfiles"
