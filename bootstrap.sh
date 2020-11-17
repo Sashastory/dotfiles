@@ -20,6 +20,8 @@ brew install node
 brew install mc
 
 chsh -s "/bin/zsh"
+echo "allow apps downloaded from anywhere"
+sudo spctl --master-disable
 
 echo "installing a few global npm packages"
 npm install --global parcel-bundler fkill-cli
@@ -37,6 +39,7 @@ brew cask install yandex-disk
 brew cask install slack
 brew cask install tandem
 brew cask install zoom
+brew cask install flipper
 brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 brew cleanup
 
