@@ -40,6 +40,7 @@ brew cask install slack
 brew cask install tandem
 brew cask install zoom
 brew cask install flipper
+brew cask install postman
 brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 brew cleanup
 
