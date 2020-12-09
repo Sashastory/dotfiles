@@ -27,21 +27,21 @@ echo "installing a few global npm packages"
 npm install --global parcel-bundler fkill-cli
 
 echo "installing apps with brew cask"
-brew cask install discord
-brew cask install google-chrome
-brew cask install firefox
-brew cask install visual-studio-code
-brew cask install vlc
-brew cask install spotify
-brew cask install webstorm
-brew cask install telegram
-brew cask install yandex-disk
-brew cask install slack
-brew cask install tandem
-brew cask install zoom
-brew cask install flipper
-brew cask install postman
-brew cask install adoptopenjdk/openjdk/adoptopenjdk8
+brew install --cask discord
+brew install --cask google-chrome
+brew install --cask firefox
+brew install --cask visual-studio-code
+brew install --cask vlc
+brew install --cask spotify
+brew install --cask webstorm
+brew install --cask telegram
+brew install --cask yandex-disk
+brew install --cask slack
+brew install --cask tandem
+brew install --cask zoom
+brew install --cask flipper
+brew install --cask postman
+brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
 brew cleanup
 
 gem install cocoapods
