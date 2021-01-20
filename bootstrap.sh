@@ -44,7 +44,7 @@ brew install --cask postman
 brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
 brew cleanup
 
-gem install cocoapods
+sudo gem install cocoapods -n /usr/local/bin
 brew tap facebook/fb
 brew install idb-companion
 sudo -H python3 -m pip install fb-idb -v
