@@ -28,6 +28,7 @@ echo "installing a few global npm packages"
 npm install --global parcel-bundler fkill-cli
 
 echo "installing apps with brew cask"
+brew install --cask iterm2
 brew install --cask discord
 brew install --cask google-chrome
 brew install --cask brave-browser
