@@ -29,18 +29,14 @@ npm install --global parcel-bundler fkill-cli
 echo "installing apps with brew cask"
 brew install --cask discord
 brew install --cask google-chrome
-brew install --cask firefox
-brew install --cask visual-studio-code
-brew install --cask vlc
+brew install --cask brave-browser
+brew install --cask jetbrains-toolbox
 brew install --cask spotify
-brew install --cask webstorm
 brew install --cask telegram
 brew install --cask yandex-disk
 brew install --cask slack
-brew install --cask tandem
 brew install --cask zoom
 brew install --cask flipper
-brew install --cask reactotron
 brew install --cask postman
 brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
 brew cleanup
@@ -49,10 +45,13 @@ sudo gem install cocoapods -n /usr/local/bin
 brew tap facebook/fb
 brew install idb-companion
 sudo -H python3 -m pip install fb-idb -v
+brew tap yandex/arc https://arc-vcs.yandex-team.ru/homebrew-tap
+brew install arc-launcher
+brew services start arc-launcher
 
 echo "cloning dotfiles"
 rm -rf "${HOME}/Sources/dotfiles"
-git clone https://github.com/FokinAleksandr/dotfiles.git "${HOME}/Sources/dotfiles"
+git clone https://github.com/Sashastory/dotfiles.git "${HOME}/Sources/dotfiles"
 
 rsync --exclude ".git/" \
   --exclude ".DS_Store" \
